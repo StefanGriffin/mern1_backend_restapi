@@ -1,4 +1,4 @@
-const { validationResult } = require('express-validator/check');
+const { validationResult } = require('express-validator');
 
 const Post = require('../models/post');
 
@@ -11,21 +11,20 @@ exports.getPosts = (req, res, next) => {
         content: 'This is the first post!',
         imageUrl: 'images/duck.jpg',
         creator: {
-          name: 'Maximilian',
+          name: 'Maximilian'
         },
-        createdAt: new Date(),
-      },
-    ],
+        createdAt: new Date()
+      }
+    ]
   });
 };
 
 exports.createPost = (req, res, next) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
-    return res.status(422).json({
-      message: 'Validation failed, entered data is incorect!',
-      errros: errors.array(),
-    });
+    const error = new Error('Validation failed, entered data is incorrect.');
+    error.statusCode = 422;
+    throw error;
   }
   const title = req.body.title;
   const content = req.body.content;
@@ -33,18 +32,20 @@ exports.createPost = (req, res, next) => {
     title: title,
     content: content,
     imageUrl: 'images/truck.jpg',
-    creator: { name: 'Stefan' },
+    creator: { name: 'Stefan' }
   });
   post
     .save()
-    .then((result) => {
-      console.log(result);
+    .then(result => {
       res.status(201).json({
         message: 'Post created successfully!',
         post: result
       });
     })
-    .catch((err) => {
-      console.log(err);
+    .catch(err => {
+      if (!err.statusCode) {
+        err.statusCode = 500;
+      }
+      next(err);
     });
 };
