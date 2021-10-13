@@ -17,16 +17,8 @@
 
 [6 - Added pagination ](../../tree/6d8f5c0101c8c5d856af526cd5d84ef6c83f73c3/)
 
-[7 - Empty ](../../tree//)
+[7 - Added user login ](../../tree/e5cd0dfaba94293bab69c2d010889ef993421e82/)
 
 [8 - Empty ](../../tree//)
 
 [9 - Empty ](../../tree//)
-
-[10 - Empty ](../../tree//)
-
-[11 - Empty ](../../tree//)
-
-[12 - Empty ](../../tree//)
-
-[13 - Empty ](../../tree//)
