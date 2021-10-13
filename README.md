@@ -13,7 +13,7 @@
 
 [4 - Connected to the Database ](../../tree/1e7ffa983d01d989dd8d196e08c7c6860590638d/)
 
-[5 - Empty ](../../tree//)
+[5 - Static images and error handling ](../../tree/86b980d0bafdda6f5edd2e39903aa25311a96121/)
 
 [6 - Empty ](../../tree//)
 
