@@ -19,6 +19,6 @@
 
 [7 - Added user login ](../../tree/e5cd0dfaba94293bab69c2d010889ef993421e82/)
 
-[8 - Empty ](../../tree//)
+[8 - Added authorization checks ](../../tree/c3a5da40de823633058c91118e0e84f12a23629a/)
 
-[9 - Empty ](../../tree//)
+[9 - Finished ](../../tree//)
